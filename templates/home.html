@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>QA Web</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="title">Question-Answering Website</div>
+            <div class="message">Welcome! Ask us, we'll answer your question based on wikipedia.</div>
+        </div>
+        <div id="body">
+            <!-- QA section -->
+            <div id="qa_section" class="section">
+                <div class="section_title">Let's ask your question!</div>
+                <div class="section_content flex_box_col">
+                    <div id="question_box" class="flex_item">
+                        <div class="sub_title">Your question</div>
+                        <div class="content">
+                            <form method="post" class="flex_box_row">
+                                <input class="flex_item" type="text" name="question" id="question" value="{{ question }}"></input>
+                                <button class="flex_item" type="submit" id="search_btn" onclick="onClick()">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="page_box" class="flex_item">
+                        <div class="sub_title">Wikipedia page</div>
+                        <div class="content">
+                            <input type="textarea" disabled id="answer" value="{{top_page}}"></input>
+                        </div>
+                    </div>
+                    <div id="answer_box" class="flex_item">
+                        <div class="sub_title">Answer</div>
+                        <div class="content">
+                            <input disabled id="text" value="{{answer}}"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About section -->
+            <div id="about_section" class="section">
+                <div class="section_title">About us</div>
+                <div id="members_list" class="section_content flex_box_row">
+                    <div class="flex_item member_box">
+                        <img src="/static/img/Thinh.jpg" alt="" class="member_avatar">
+                        <div class="member_info">Nguyễn Vạn Thịnh</div>
+                        <div class="member_id">19120668</div>
+                    </div>
+                    <div class="flex_item member_box">
+                        <img src="/static/img/Tan.jpg" alt="" class="member_avatar">
+                        <div class="member_info">Nguyễn Minh Tân</div>
+                        <div class="member_id">19120648</div>
+                    </div>
+                    <div class="flex_item member_box">
+                        <img src="/static/img/Dang.jpg" alt="" class="member_avatar">
+                        <div class="member_info">Huỳnh Hải Đăng</div>
+                        <div class="member_id">19120468</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
